@@ -1,0 +1,94 @@
+:root {
+      --black-transparent: rgba(0, 0, 0, 0.75);
+      --white: #ffffff;
+      --accent: #c5a059;
+      --font-heading: 'Playfair Display', serif;
+    }
+    @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap');
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      height: 100vh;
+      width: 100vw;
+      overflow: hidden;
+      font-family: Arial, sans-serif;
+    }
+    h1, h2, h3 {
+  font-family: var(--font-heading);
+  font-weight: 700;
+    }
+    /* ===== HEADER / NAVBAR ===== */
+    header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      height: 70px;
+      background: var(--black-transparent);
+      backdrop-filter: blur(6px);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 50px;
+      z-index: 1000;
+    }
+
+    .logo {
+      font-family: var(--font-heading);
+      font-weight: 700;
+      font-size: 1.6rem;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--accent);
+    }
+
+    .nav-links a {
+      color: var(--white);
+      text-decoration: none;
+      margin-left: 30px;
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      transition: color 0.3s ease;
+    }
+
+    .nav-links a:hover {
+      color: var(--accent);
+    }
+
+    /* ===== IMAGE ===== */
+    .fullscreen-img {
+      width: 100vw;
+      height: 100vh;
+      object-fit: contain;
+      display: block;
+      padding-top: 70px; /* space for header */
+    }
+
+    /* ===== BACK BUTTON ===== */
+    .nav-buttons {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  gap: 15px; 
+  z-index: 999;
+}
+
+    .next-btn {
+      padding: 12px 22px;
+      background: var(--black-transparent);
+      color: var(--white);
+      text-decoration: none;
+      font-size: 16px;
+      border-radius: 30px;
+      transition: background 0.3s ease;
+    }
+
+    .next-btn:hover {
+      background: rgba(0, 0, 0, 0.9);
+    }
